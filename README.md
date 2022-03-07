@@ -31,11 +31,3 @@ SHOW DATABASES;
 use symfony_docker;
 show tables;
 ```
-
-
-
-
-composer require symfony/maker-bundle --dev
-
-
-php ./bin/console make:migration
