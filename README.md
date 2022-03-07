@@ -1,4 +1,4 @@
-### Montrer les containers
+### Monter les containers
 ```bash
 docker-compose up -d
 ```
