@@ -25,7 +25,7 @@ composer create-project symfony/skeleton .
 ```
 ### Entrer dans le container database
 ```bash
-docker exec -it <name container database> /bin/sh
+docker exec -it <container name database> /bin/sh
 mysql --host=localhost --user=symfony --password=symfony
 SHOW DATABASES;
 use symfony_docker;
