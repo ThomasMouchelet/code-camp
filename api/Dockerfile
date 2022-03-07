@@ -25,9 +25,9 @@ RUN touch /usr/local/etc/php/conf.d/uploads.ini \
 ENV upload_max_filesize=500M
 ENV post_max_size=500M
 
-# COPY composer.json .
+COPY composer.json .
 
-# RUN composer install
+RUN composer install
 
 COPY . .
 
