@@ -1,5 +1,6 @@
 version: "3"
-
+volumes: 
+  db-data:
 services:
   nginx:
     image: nginx:stable-alpine
@@ -19,3 +20,14 @@ services:
     volumes:
       - ./api:/var/www/symfony_docker
     restart: on-failure
+  database:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: symfony
+      MYSQL_DATABASE: symfony_docker
+      MYSQL_USER: symfony
+      MYSQL_PASSWORD: symfony
+    ports:
+      - 3306:3306
+    volumes:
+      - db-data:/var/lib/mysql
